@@ -14,16 +14,16 @@ str(pop$date) #currently stored as character, will change this later
 dim(pop) #10 columns
 
 #selecting things
-pop[pop$site=="GERMANIA NO. 2",]
+pop[pop$site=="GERMANIA NO. 2",] #selecting all Germania No. 2 entries
 View(pop[pop$site=="GERMANIA NO. 2",])
-pop[pop$species=="MYLU"&pop$site=="GERMANIA NO. 2",]
+pop[pop$species=="MYLU"&pop$site=="GERMANIA NO. 2",] #selecting all entries where the species is MYLU AND the site is Germania No. 2
 pop[pop$species=="MYLU" | pop$site=="GERMANIA NO. 2",]
 
 #summary
 summary(pop)
 
 #add a column
-pop$newsize = (pop$clustersize)+1
+pop$newsize = (pop$clustersize)+1 #just adding 1 to each of the counts
 dim(pop) #checking that a new column was added, should be 11 columns now
 
 #aggregate

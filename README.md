@@ -1,6 +1,6 @@
 # Alice Stitzer's Repository for Quantitative Methods Class
 ## PARAGRAPH ABOUT DATA ## 
-# I have bat hibernacula count data, white-nose syndrome (WNS) disease data, and bat banding data from the midwest and northeast. To briefly summarize key columns, the count data includes site, date, species, year of WNS arrival (yoa), and cluster size. I haven’t worked much with the disease data or the banding data yet, but the banding data includes site, date, species, band number, lgdL (metric for Pd load), and sex. For the sake of brevity, I’ve copy and pasted a summary table from the count data that is attached below. I want to focus on little brown bat data from the count data and incorporate disease data to see how survival and growth rates are affected by colony size and white-nose syndrome. I’m still thinking through how to analyze extirpated site data. My main goals for this data are as follows: 1) Determine how little brown bat populations have fared in small and large sites post-WNS invasion, 2) Determine how colony size affects survival and population growth rates, and 3) Determine how many extirpated sites have been recolonized and what were their fates. Overall, what are the recovery dynamics of small and large sites?
+# I have bat hibernacula count data, white-nose syndrome (WNS) disease data, and bat banding data from the midwest and northeast. To briefly summarize key columns, the count data includes site, date, species, year of WNS arrival (yoa), and cluster size. I haven’t worked much with the disease data or the banding data yet, but the banding data includes site, date, species, band number, lgdL (metric for Pd load), and sex. I want to focus on little brown bat data from the count data and incorporate disease data to see how survival and growth rates are affected by colony size and white-nose syndrome. I’m still thinking through how to analyze extirpated site data. My main goals for this data are as follows: 1) Determine how little brown bat populations have fared in small and large sites post-WNS invasion, 2) Determine how colony size affects survival and population growth rates, and 3) Determine how many extirpated sites have been recolonized and what were their fates. Overall, what are the recovery dynamics of small and large sites?
 
 ## WEEK 1 ##
 
@@ -8,9 +8,7 @@ CODE: stitzer_week1_code
 
 DATA: kate_cluster_master_copy.csv
 
-This week, I read in my data and explored some basic functions in R using bat count data.
-
-## WEEK 2 ##
+This week, I read in my data and explored some basic functions in R using bat count data. Specifically, summing counts across species, averaging counts for each species, and summing the MYLU counts only grouped by site and date using aggregate.
 
 
 
