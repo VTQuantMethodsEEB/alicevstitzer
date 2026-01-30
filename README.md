@@ -4,11 +4,19 @@
 
 ## WEEK 1 ##
 
-CODE: stitzer_week1_code
+CODE: week1_alicestitzer.R
 
-DATA: kate_cluster_master_copy.csv
+DATA: kate_cluster_master_class.csv
 
-This week, I read in my data and explored some basic functions in R using bat count data. Specifically, summing counts across species, averaging counts for each species, and summing the MYLU counts only grouped by site and date using aggregate.
+This week, I read in bat count data and explored some basic functions in R. 
+Specifically, summing counts across species, averaging counts for each species, and summing the MYLU counts grouped by site and date using aggregate.
 
+## WEEK 2 ##
 
+CODE: week2_alicestitzer.R
 
+DATA: kate_cluster_master_class.csv, 1_yoa_midwest_class.csv
+
+This week, I manipulated the bat count data by using dplyr to group by site, date, and species.
+I used summarise to sum clustersize by group and mutate to add an additional column that added 1 to every clustersize row.
+I also practiced joining where I used a left_join to match sites from a new dataframe, yoa, to sites in my original dataframe, pop2, and add in the corresponding year of WNS arrival to pop2.
