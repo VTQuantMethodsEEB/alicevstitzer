@@ -20,3 +20,14 @@ DATA: kate_cluster_master_class.csv, 1_yoa_midwest_class.csv
 This week, I manipulated the bat count data by using dplyr to group by site, date, and species.
 I used summarise to sum clustersize by group and mutate to add an additional column that added 1 to every clustersize row.
 I also practiced joining where I used a left_join to match sites from a new dataframe, yoa, to sites in my original dataframe, pop2, and add in the corresponding year of WNS arrival to pop2.
+
+## WEEK 3 ##
+
+CODE: week3_alicestitzer.R
+
+DATA: small_sites.csv, huge_sites.csv, pop4.csv
+
+This week, I practiced making simpler plots showing MYLU counts over time in small and large sites.
+I also wanted to try and make more advanced plots showing my GLMM predictions with the count data.
+I made a plot showing growth rates (log.lambda) on colony size as a continuous variable, and a box plot comparing growth rates in categorical groupings for small and large sites.
+I learned how to tweak visual elements, like adding/changing axes, changing color themes, etc.
