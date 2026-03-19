@@ -31,3 +31,25 @@ This week, I practiced making simpler plots showing MYLU counts over time in sma
 I also wanted to try and make more advanced plots showing my GLMM predictions with the count data.
 I made a plot showing growth rates (log.lambda) on colony size as a continuous variable, and a box plot comparing growth rates in categorical groupings for small and large sites.
 I learned how to tweak visual elements, like adding/changing axes, changing color themes, etc.
+
+## WEEK 5 ##
+
+CODE: week5_alicestitzer.R
+
+DATA: pop4.csv, unique_sites_master_class.csv
+
+This week, I applied various tests on two sets of hypotheses.
+
+#First set of hypotheses:
+#null: there is no difference in max colony size (max.N) between wisconsin and new york
+#alternative: there is a significant difference in max colony size (max.N) between wisconsin and new york
+
+I made a for loop and ran a permutation on my data to see if colony sizes vary by region (filtered by WI and NY for simplicity).
+It showed no significance, meaning that the northeast and midwest have no statistical difference in colony sizes.
+
+#Second set of hypotheses:
+#null: there is no relationship between growth rates (log.lambda) and colony size (log.max.N)
+#alternative: there is a relationship between growth rates (log.lambda) and colony size (log.max.N)
+
+I ran a Pearson's correlation test to see if colony size affects growth rates, assuming my data was normally distributed and linear. 
+It indicated a weak, but significant positive relationship between colony size (log.max.N) and growth rates (log.lambda), meaning growth rates increased slightly as colony size increased.
