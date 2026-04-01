@@ -121,3 +121,31 @@ c
 
 #effect plots look fine, raw data overlaid just makes the relationship look less clear
 #still figuring out best way to visualize  these
+
+#one option might be to average the site data
+head(count)
+library(tidyverse)
+counts.ag = count %>%
+  group_by(site) %>%
+  mutate(mean.log.lambda = mean(log.lambda))
+
+counts.ag = counts.ag %>%
+  select(site, max.N, mean.log.lambda, size.category)
+
+counts.ag = unique(counts.ag)
+
+#plotting HERE
+c <- ggplot() +
+  geom_jitter(data = counts.ag, aes(x = size.category, y = mean.log.lambda, color=max.N), width = 0.1, alpha = 0.4) +
+  # predicted means
+  geom_point(data = newdat2, aes(x = size.category, y = fit), size = 3) +
+  # confidence intervals
+  geom_errorbar(data = newdat2, aes(x = size.category, ymin = lower, ymax = upper), width = 0.15) +
+  labs(
+    x = "Colony size category",
+    y = "Log10 colony growth rate",
+    title = ("Large vs Small Colony Size on Colony Growth Rate")) +
+  scale_colour_viridis(option="viridis") +
+  theme_minimal()
+c
+#could also remove that one large one and note in caption
