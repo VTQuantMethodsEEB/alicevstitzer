@@ -1,6 +1,6 @@
 # Alice Stitzer's Repository for Quantitative Methods Class
 ## PARAGRAPH ABOUT DATA ## 
-# I have bat hibernacula count data, white-nose syndrome (WNS) disease data, and bat banding data from the midwest and northeast. To briefly summarize key columns, the count data includes site, date, species, year of WNS arrival (yoa), and cluster size. I haven’t worked much with the disease data or the banding data yet, but the banding data includes site, date, species, band number, lgdL (metric for Pd load), and sex. I want to focus on little brown bat data from the count data and incorporate disease data to see how survival and growth rates are affected by colony size and white-nose syndrome. I’m still thinking through how to analyze extirpated site data. My main goals for this data are as follows: 1) Determine how little brown bat populations have fared in small and large sites post-WNS invasion, 2) Determine how colony size affects survival and population growth rates, and 3) Determine how many extirpated sites have been recolonized and what were their fates. Overall, what are the recovery dynamics of small and large sites?
+I have bat hibernacula count data, white-nose syndrome (WNS) disease data, and bat banding data from the midwest and northeast. To briefly summarize key columns, the count data includes site, date, species, year of WNS arrival (yoa), and cluster size. I haven’t worked much with the disease data or the banding data yet, but the banding data includes site, date, species, band number, lgdL (metric for Pd load), and sex. I want to focus on little brown bat data from the count data and incorporate disease data to see how survival and growth rates are affected by colony size and white-nose syndrome. I’m still thinking through how to analyze extirpated site data. My main goals for this data are as follows: 1) Determine how little brown bat populations have fared in small and large sites post-WNS invasion, 2) Determine how colony size affects survival and population growth rates, and 3) Determine how many extirpated sites have been recolonized and what were their fates. Overall, what are the recovery dynamics of small and large sites?
 
 ## WEEK 1 ##
 
@@ -53,3 +53,24 @@ It showed no significance, meaning that the northeast and midwest have no statis
 
 I ran a Pearson's correlation test to see if colony size affects growth rates, assuming my data was normally distributed and linear. 
 It indicated a weak, but significant positive relationship between colony size (log.max.N) and growth rates (log.lambda), meaning growth rates increased slightly as colony size increased.
+
+## WEEK 7/8 ##
+
+CODE: week7_alicestitzer.R
+
+DATA: pop_join.csv
+
+#PART1
+For week 7, I used a univariate linear model to see if there is an influence of colony size (predictor variable) on growth rates (response variable).
+Looking at residuals and other diagnostic plots generated in check_model made me realize that this model does not fit my data very well. sad face :-(
+Alas! plotting my data and using stat_smooth with "lm" showed a weakly positive relationship between growth rates and colony size
+
+#PART2
+For week 8, I joined my count data with disease and temperature data to test some different hypotheses using additive and interactive linear models.
+
+Additive model: In this model, neither population size nor hibernacula temperature has a detectable effect on fungal growth.
+
+Interactive mode: Fungal loads was influenced by an interaction between pre-WNS colony size and hibernacula temperature.
+The effect of colony size shifted from positive at low temperatures to negative at high temperatures
+Small colonies did not undergo rapid evolution of adaptive traits which could explain the increase in fungal loads in warmer hibernacula.
+This is more aligned with decline patterns in the epidemic phase, and opposite the trend seen in large and warm colonies in the established phase.
