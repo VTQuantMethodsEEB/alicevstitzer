@@ -114,3 +114,6 @@ ggplot(new.bat.combos,aes(x=log.max.N,y=lgdL,colour=temp))+ #set up plot using p
   geom_point(data=pop, aes(x=log.max.N,y=lgdL,colour = temp)) #add the observed data to the plot
 #large colonies at colder temperatures have HIGHER fungal loads than large colonies at warmer temperatures, and the effect reverses at smaller colonies
 #potential evidence that small colonies lack the adaptive traits that evolved rapidly in large, and warm colonies
+
+#woah- i knew this was likely the case from Sam's data but this is a super convncing plot of this relationship!!
+# this would be a good one to include in your committee meeting!
