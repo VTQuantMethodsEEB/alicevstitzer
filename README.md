@@ -74,3 +74,24 @@ Interactive mode: Fungal loads was influenced by an interaction between pre-WNS 
 The effect of colony size shifted from positive at low temperatures to negative at high temperatures
 Small colonies did not undergo rapid evolution of adaptive traits which could explain the increase in fungal loads in warmer hibernacula.
 This is more aligned with decline patterns in the epidemic phase, and opposite the trend seen in large and warm colonies in the established phase.
+
+## WEEK 10/11 ##
+
+CODE: week10_alicestitzer.R
+
+DATA: pop_new.csv
+
+#PART1
+For week 10, I used a generalized linear model to see if there is an influence of colony size and temperature on fungal loads (same variables I used for week 8, but using GLM).
+Large colonies at colder temperatures have HIGHER fungal loads than large colonies at warmer temperatures, and the effect reverses at smaller colonies.
+I attached a more in-depth results statement in a word doc on Canvas
+
+#PART2
+For week 11, I compared four models that are testing similar hypotheses as Week 10.
+1) glm(lgdL~log.max.N)
+2) glm(lgdL~log.max.N+temp)
+3) glm(lgdL~log.max.N*temp)
+4) glm(lgdL~1)
+
+The interactive model with colony size and temp performed the best out of all the models I compared. 
+Mod 3 had the lowest p-value (0.022) in the likelihood test, and the lowest dAIC (0) and highest weight (0.46) when compared using AIC
