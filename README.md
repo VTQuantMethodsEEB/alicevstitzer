@@ -94,4 +94,16 @@ For week 11, I compared four models that are testing similar hypotheses as Week 
 4) glm(lgdL~1)
 
 The interactive model with colony size and temp performed the best out of all the models I compared. 
-Mod 3 had the lowest p-value (0.022) in the likelihood test, and the lowest dAIC (0) and highest weight (0.46) when compared using AIC
+Mod 3 had the lowest p-value (0.022) in the likelihood test, and the lowest dAIC (0) and highest weight (0.46) when compared using AIC.
+
+## WEEK 12 ##
+
+CODE: week12_alicestitzer.R
+
+DATA: pop_new.csv
+
+This week, I ran a mixed model on my data (glmmTMB) to see if pre-WNS colony size has an effect on population growth rates in the established phase of WNS.
+I added site in as a random effect, and a dispersion formula that accounts for the larger variations in small colony growth rates (heteroskedasticity)
+glmmTMB(log.lambda~log.max.N+(1|site), dispformula = ~log.max.N, data = pop, family = "gaussian")
+This model fit my data a lot better than the linear model I tried in Week 7, but the results are the same: growth rates increase as colony size increases
+I attached a more in-depth results statement in a word doc on Canvas
