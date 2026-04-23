@@ -104,6 +104,8 @@ DATA: pop_new.csv
 
 This week, I ran a mixed model on my data (glmmTMB) to see if pre-WNS colony size has an effect on population growth rates in the established phase of WNS.
 I added site in as a random effect, and a dispersion formula that accounts for the larger variations in small colony growth rates (heteroskedasticity)
-glmmTMB(log.lambda~log.max.N+(1|site), dispformula = ~log.max.N, data = pop, family = "gaussian")
-This model fit my data a lot better than the linear model I tried in Week 7, but the results are the same: growth rates increase as colony size increases
+
+1) glmmTMB(log.lambda~log.max.N+(1|site), dispformula = ~log.max.N, data = pop, family = "gaussian")
+
+This model fit my data a lot better than the linear model I tried in Week 7, but the results are the same: growth rates increase as colony size increases.
 I attached a more in-depth results statement in a word doc on Canvas
